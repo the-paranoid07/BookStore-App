@@ -41,8 +41,10 @@ const MainBooks = ({setShowFirstComponent,showFirstComponent,setClickedBook})=>{
                                 <div className="book-details">
                                     <h2>{book.volumeInfo.title}</h2>
                                     {
-                                        book.volumeInfo.description < maxLength ? <p>{book.volumeInfo.description}</p>:  
-                                       <p>{book.volumeInfo.description.slice(0,maxLength-1)}</p> 
+                                        book.volumeInfo.description && (
+                                            book.volumeInfo.description < maxLength ? <p>{book.volumeInfo.description}</p>:  
+                                            <p>{book.volumeInfo.description.slice(0,maxLength-1)}</p> 
+                                        )
                                     }
                                 </div>
                                 <button onClick={()=>{

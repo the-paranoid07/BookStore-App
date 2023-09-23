@@ -30,3 +30,18 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+
+
+
+
+
+
+
+.books-container{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Two columns with equal width */
+    grid-gap: 10px; 
+}
+.books-container img{
+}

@@ -23,8 +23,10 @@ const Book = ({clickedBook})=>{
                     </div>
                     <p>{book.volumeInfo.authors[0]}</p>
                     {
-                        book.volumeInfo.description < maxLength ? <p>{book.volumeInfo.description}</p>:  
-                        <p>{book.volumeInfo.description.slice(0,maxLength)}</p>  
+                       book.volumeInfo.description && (
+                            book.volumeInfo.description < maxLength ? <p>{book.volumeInfo.description}</p>:  
+                            <p>{book.volumeInfo.description.slice(0,maxLength-1)}</p> 
+                        )
                     }
                     <div className="book-details-footer">
                         <span>Avg Rating : {book.volumeInfo.averageRating} </span>
