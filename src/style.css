@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242121;
+    color: white;
+}
+
+.header,.left,.middle,.right,.search-bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.header,.main-container{
+    padding: 0.5rem 1.5rem;
+}
+
+.main-container .top .top-books{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
