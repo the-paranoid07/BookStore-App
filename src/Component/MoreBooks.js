@@ -11,9 +11,9 @@ const MoreBooks = ()=>{
 
     useEffect(()=>{
 
-        axios.get("https://www.googleapis.com/books/v1/volumes?q=harry+potter&maxResults=18")
+        axios.get("https://www.googleapis.com/books/v1/volumes?q=Sherlock+Holmes")
         .then(response => {
-            console.log(response.data);
+            console.log(response.data.items);
             setBooks(response.data.items)
         })
         .catch(err => console.log(err))
